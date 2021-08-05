@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+
+{%extends "appone/home.html" %}
+  <body>
+ {% block body_block %}
+    <form class="class="form-inline"" action="/addp/" method="POST">
+      {% csrf_token %}
+      <table>
+      {{form.as_table}}
+      </table>
+      <button type="submit" name="button">save</button>
+    </form>
+    {% endblock %}
+  </body>
